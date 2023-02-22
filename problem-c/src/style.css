@@ -1,0 +1,19 @@
+/* Include custom styling for the table */
+
+table {
+  max-width: 600px; /* fixed sizing */
+}
+
+/* <SortButton /> styling */
+
+.btn-sort {
+  color: #bbb;
+}
+
+.btn-sort .flip {
+  transform: scale(1, -1);
+}
+
+.btn-sort .active {
+  color: #0d6efd
+}
