@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/App';
+import './style.css';
 
 import SAMPLE_DOGS from './data/dogs.json'; //a sample list of dogs (model)
 
