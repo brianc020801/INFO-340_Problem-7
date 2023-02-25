@@ -1,5 +1,19 @@
 import React from 'react';
 
+export default function PetList(props){
+    const petCardArray = props.pets.map((pet) => {
+        return <PetCard petData={pet} adoptCallback={props.adoptCallback} key={pet.name}/>
+    })
+    return(
+        <>
+        <h2>Dogs for Adoption</h2>
+        <div className='card-deck'>
+            {petCardArray}
+        </div>
+        </>
+    )
+}
+
 function PetCard(props){
     const name = props.petData.name;
     const breed = props.petData.breed;
@@ -17,13 +31,3 @@ function PetCard(props){
     )
 }
 
-export function PetList(props){
-    const petCardArray = props.pets.map((pet) => {
-        return <PetCard petData={pet} adoptCallback={props.adoptCallback} key={pet.name}/>
-    })
-    return(
-        <div className='card-deck'>
-            {petCardArray}
-        </div>
-    )
-}
